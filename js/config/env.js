@@ -1,4 +1,4 @@
 const _config = {
-    env: 'DEV',
+    env: 'PROD',
     githubURL: 'https://weeding-invitation.github.io/salvador-citlali'
 };
