@@ -1,5 +1,7 @@
+/**
+ * Main function
+ */
 function updateSections() {
-    console.log(_data);
     setNavbar(_data.sections.navbar);
     setBanner(_data.sections.banner);
     setHello(_data.sections.hello);
@@ -24,7 +26,7 @@ function setNavbar(navbar) {
  */
 function setBanner(banner) {
     if (banner) {
-        $('#fh5co-header').css('background-image', `url(../images/${banner.image})`);
+        $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.image)}")`);
         $('.display-tc h1').html(banner.title);
         $('.display-tc h2').html(banner.subtitle);
         setCountdown(_data.weedingDate);
@@ -42,19 +44,23 @@ function setHello(hello) {
         $('#hello-section-description-id').html(hello.description);
 
         if (hello.coupleWrapper && hello.coupleWrapper.groom) {
-            $('.groom img').css('background-image', `url(../images/${hello.coupleWrapper.groom.image})`);
+            $('.groom img').css('background-image', `url("${buildImagePath(hello.coupleWrapper.groom.image)}")`);
             $('.desc-groom h3').html(hello.coupleWrapper.groom.name);
             $('.desc-groom p').html(hello.coupleWrapper.groom.description);
         }
 
         if (hello.coupleWrapper && hello.coupleWrapper.bride) {
-            $('.bride img').css('background-image', `url(../images/${hello.coupleWrapper.bride.image})`);
+            $('.bride img').css('background-image', `url(${buildImagePath(hello.coupleWrapper.bride.image)})`);
             $('.desc-bride h3').html(hello.coupleWrapper.bride.name);
             $('.desc-bride p').html(hello.coupleWrapper.bride.description);
         }
     }
 }
 
+/**
+ * Function to display weeding events info
+ * @param {*} weedingEvents 
+ */
 function setWeedingEvents(weedingEvents) {
     if (weedingEvents) {
         $('#weeding-events-label').html(weedingEvents.label);
@@ -147,6 +153,10 @@ function getOurStoryEventTemplate(_event, position) {
     `;
 }
 
+/**
+ * Function to display gallery
+ * @param {*} gallery 
+ */
 function setGallery(gallery) {
     $('#gallery-section-title-id').html(gallery.label);
     $('#gallery-section-description-id').html(gallery.description);
@@ -171,6 +181,23 @@ function setCountdown(weedingDate) {
         day: d.getDate(),
         enableUtc: false
     });
+}
+
+/**
+ * Function to return correct path for each environment
+ * @param {*} fileName 
+ */
+function buildImagePath(fileName) {
+    let url = '';
+    switch (_config.env) {
+        case 'PROD':
+            url = `${_config.githubURL}/images/${fileName}`;
+            break;
+        default:
+            url = `../images/${fileName}`;
+            break;
+    }
+    return url;
 }
 
 updateSections();
