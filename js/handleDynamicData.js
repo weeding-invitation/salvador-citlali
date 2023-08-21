@@ -1,13 +1,30 @@
+import { getData } from './config/data.js';
+import { getConfig } from './config/env.js';
+
 /**
  * Main function
  */
-function updateSections() {
+function buildPage() {
+    const _data = getData();
     setNavbar(_data.sections.navbar);
     setBanner(_data.sections.banner);
     setHello(_data.sections.hello);
     setWeedingEvents(_data.sections.weedingEvents);
     setOurStory(_data.sections.ourStory);
     setGallery(_data.sections.gallery);
+}
+
+/**
+ * Function to setup page
+ */
+function setupPage() {
+    moment.locale('es', {
+        months: 'Enero_Febrero_MaFrzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre'.split('_'),
+        monthsShort: 'Enero._Feb._Mar_Abr._May_Jun_Jul._Ago_Sept._Oct._Nov._Dec.'.split('_'),
+        weekdays: 'Domingo_Lunes_Martes_Miercoles_Jueves_Viernes_Sabado'.split('_'),
+        weekdaysShort: 'Dom._Lun._Mar._Mier._Jue._Vier._Sab.'.split('_'),
+        weekdaysMin: 'Do_Lu_Ma_Mi_Ju_Vi_Sa'.split('_')
+    });
 }
 
 /**
@@ -29,7 +46,7 @@ function setBanner(banner) {
         $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.image)}")`);
         $('.display-tc h1').html(banner.title);
         $('.display-tc h2').html(banner.subtitle);
-        setCountdown(_data.weedingDate);
+        setCountdown(banner.weedingDate);
     }
 }
 
@@ -39,7 +56,7 @@ function setBanner(banner) {
  */
 function setHello(hello) {
     if (hello) {
-        const formatedDate = moment(_data.weedingDate).format('MMMM DDDo, YYYY');
+        const formatedDate = moment(hello.weedingDate).format('MMMM DDDo, YYYY');
         $('.fh5co-heading h3').html(`${formatedDate} ${hello.location}`);
         $('#hello-section-description-id').html(hello.description);
 
@@ -160,6 +177,27 @@ function getOurStoryEventTemplate(_event, position) {
 function setGallery(gallery) {
     $('#gallery-section-title-id').html(gallery.label);
     $('#gallery-section-description-id').html(gallery.description);
+    gallery.photos.forEach(photo => {
+        const pic = getPhotoTemplate(photo);
+        $('#fh5co-gallery-list').append(pic);
+    });
+}
+
+/**
+ * Function to generate photo gallery html
+ * @param {*} photo 
+ * @returns 
+ */
+function getPhotoTemplate(photo) {
+    return `
+    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(${photo.image}); ">
+        <a href="${photo.image}">
+            <div class="case-studies-summary">
+                <span>14 Photos</span>
+                <h2>${photo.title}</h2>
+            </div>
+        </a>
+    </li>`;
 }
 
 /**
@@ -174,7 +212,6 @@ function setCountdown(weedingDate) {
         day: d.getDate()
     });
 
-    //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
         year: d.getFullYear(),
         month: d.getMonth() + 1,
@@ -189,15 +226,17 @@ function setCountdown(weedingDate) {
  */
 function buildImagePath(fileName) {
     let url = '';
+    const _config = getConfig();
     switch (_config.env) {
         case 'PROD':
-            url = `${_config.githubURL}/images/${fileName}`;
+            url = `${_config.githubURL}/${fileName}`;
             break;
         default:
-            url = `../images/${fileName}`;
+            url = `../${fileName}`;
             break;
     }
     return url;
 }
 
-updateSections();
+setupPage();
+buildPage();
