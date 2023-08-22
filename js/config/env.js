@@ -1,6 +1,6 @@
 export function getConfig() {
     return {
-        env: 'PROD',
+        env: 'DEV',
         githubURL: 'https://weeding-invitation.github.io/salvador-citlali'
     };
 }
