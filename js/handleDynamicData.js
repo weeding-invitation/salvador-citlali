@@ -143,7 +143,7 @@ function setOurStory(ourStory) {
         $('#ourstory-section-description-id').html(ourStory.description);
         ourStory.events.forEach((_event, i) => {
             let ourStoryEvent = getOurStoryEventTemplate(_event, i);
-            if (i !=( ourStory.events.length -1)) {
+            if (i != (ourStory.events.length - 1)) {
                 ourStoryEvent += '<br>';
             }
             $('#timeline-id').append(ourStoryEvent);
@@ -196,12 +196,10 @@ function setGallery(gallery) {
 function getPhotoTemplate(photo) {
     return `
     <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(${photo.image}); ">
-        <a href="${photo.image}">
-            <div class="case-studies-summary">
-                <span>${photo.description}</span>
-                <h2>${photo.title}</h2>
-            </div>
-        </a>
+    <div class="case-studies-summary">
+        <span>${photo.description}</span>
+        <h2>${photo.title}</h2>
+    </div>
     </li>`;
 }
 
