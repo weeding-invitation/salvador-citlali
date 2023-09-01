@@ -21,25 +21,25 @@ export function getData() {
                 weedingDate: weedingDate,
                 coupleWrapper: {
                     groom: {
-                        name: 'Salvador Gonzalez',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
+                        name: '',
+                        description: '',
                         image: 'images/groom.jpg'
                     },
                     bride: {
-                        name: 'Citlali Sandoval',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
+                        name: '',
+                        description: '',
                         image: 'images/bride.png'
                     }
                 }
             },
             weedingEvents: {
-                label: 'Weeding Events',
+                label: 'Eventos',
                 events: [
                     {
                         name: 'Ceremonia Religiosa',
                         date: weedingDate,
-                        startAt: '6:00pm',
-                        endAt: '7:00pm',
+                        startAt: '5:00pm',
+                        endAt: '6:00pm',
                         locationName: 'Templo Expiatorio del Carmen',
                         address: 'Av. México Nte. 117, Centro, 63000 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Templo+Expiatorio+del+Carmen,+Tepic,+Av.+México+Nte.+117,+Centro,+63000+Tepic,+Nay.,+México/@21.5065047,-104.8959787,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x842736fd96151457:0x344fcb990efcadfe!2m2!1d-104.8935456!2d21.5065556!3e0?entry=ttu'
@@ -47,7 +47,7 @@ export function getData() {
                     {
                         name: 'Recepción',
                         date: weedingDate,
-                        startAt: '8:00pm',
+                        startAt: '7:00pm',
                         endAt: '12:00pm',
                         locationName: 'Finca Arboledas',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
@@ -92,7 +92,7 @@ export function getData() {
                 ]
             },
             gallery: {
-                label: 'Weeding Gallery',
+                label: 'Galeria',
                 description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 photos: [
                     {
@@ -138,7 +138,7 @@ export function getData() {
                     {
                         image: 'images/gallery/gallery-9.jpg',
                         title: '',
-                        description: 'Marry me ♥‿♥'
+                        description: ''
                     },
                 ]
             }
