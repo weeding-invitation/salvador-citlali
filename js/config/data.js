@@ -21,19 +21,19 @@ export function getData() {
                 weedingDate: weedingDate,
                 coupleWrapper: {
                     groom: {
-                        name: 'Salvador Gonzalez',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
+                        name: '',
+                        description: '',
                         image: 'images/groom.jpg'
                     },
                     bride: {
-                        name: 'Citlali Sandoval',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
+                        name: '',
+                        description: '',
                         image: 'images/bride.png'
                     }
                 }
             },
             weedingEvents: {
-                label: 'Weeding Events',
+                label: 'Eventos',
                 events: [
                     {
                         name: 'Ceremonia Religiosa',
@@ -92,7 +92,7 @@ export function getData() {
                 ]
             },
             gallery: {
-                label: 'Weeding Gallery',
+                label: 'Galeria',
                 description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 photos: [
                     {
