@@ -695,17 +695,17 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-gallery-list li a:hover:before {
   background: rgba(0, 0, 0, 0.5);
 }
-#fh5co-gallery-list li a .case-studies-summary {
+#fh5co-gallery-list li .case-studies-summary {
   width: auto;
-  bottom: -8em;
+  bottom: 0;
   left: 2em;
   right: 2em;
   position: absolute;
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
-  #fh5co-gallery-list li a .case-studies-summary {
-    bottom: -8em;
+  #fh5co-gallery-list li .case-studies-summary {
+    bottom: 0;
     left: 1em;
     right: 1em;
   }
