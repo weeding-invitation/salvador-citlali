@@ -1,6 +1,6 @@
 export function getData() {
     const weedingDate = '2024-01-06';
-    const weedingDateTime = `${weedingDate}T16:00:00`;
+    const weedingDateTime = `${weedingDate}T18:00:00`;
     return {
         weedingDate: weedingDate,
         sections: {
@@ -8,10 +8,12 @@ export function getData() {
                 label: 'Weeding'
             },
             banner: {
-                title: 'Salvatore & Lupe',
-                subtitle: 'We are getting Married',
+                title: 'Salvador & Citlali',
+                subtitle: '2024.01.06',
                 weedingDate: weedingDateTime,
-                image: 'images/backgrounds/img_bg_4.jpg'
+                getImage: function (isMobile) {
+                    return `images/backgrounds/${isMobile ? 'bg-2.jpg' : 'bg-3.jpg'}`
+                }
             },
             hello: {
                 location: 'Tepic, Nayarit',
@@ -19,25 +21,25 @@ export function getData() {
                 weedingDate: weedingDate,
                 coupleWrapper: {
                     groom: {
-                        name: 'Salvatore Gonzalez',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
+                        name: '',
+                        description: '',
                         image: 'images/groom.jpg'
                     },
                     bride: {
-                        name: 'Citlali Sandoval',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove',
-                        image: 'images/bride.jpg'
+                        name: '',
+                        description: '',
+                        image: 'images/bride.png'
                     }
                 }
             },
             weedingEvents: {
-                label: 'Weeding Events',
+                label: 'Eventos',
                 events: [
                     {
                         name: 'Ceremonia Religiosa',
                         date: weedingDate,
-                        startAt: '4:00pm',
-                        endAt: '5:00pm',
+                        startAt: '5:00pm',
+                        endAt: '6:00pm',
                         locationName: 'Templo Expiatorio del Carmen',
                         address: 'Av. México Nte. 117, Centro, 63000 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Templo+Expiatorio+del+Carmen,+Tepic,+Av.+México+Nte.+117,+Centro,+63000+Tepic,+Nay.,+México/@21.5065047,-104.8959787,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x842736fd96151457:0x344fcb990efcadfe!2m2!1d-104.8935456!2d21.5065556!3e0?entry=ttu'
@@ -45,8 +47,8 @@ export function getData() {
                     {
                         name: 'Recepción',
                         date: weedingDate,
-                        startAt: '6:00pm',
-                        endAt: '11:00pm',
+                        startAt: '7:00pm',
+                        endAt: '12:00pm',
                         locationName: 'Finca Arboledas',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Finca+Arboleda+Central+101+Cuauht%C3%A9moc+63180+Tepic,+Nay.,+M%C3%A9xico/@21.4857117,-104.9046945,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x842736c3470ea7c3:0xd549ac5771ca051e!2m2!1d-104.9047043!2d21.4857347?entry=ttu'
@@ -54,82 +56,100 @@ export function getData() {
                 ]
             },
             ourStory: {
-                label: 'Nuestra Historia Perraa!!, algo bien',
+                label: 'Nuestra Historia',
                 description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 events: [
-                    {
-                        title: 'First We Meet',
-                        date: '2017-09-15',
-                        image: 'images/ourStory/couple-1.jpg',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
-                    },
+                    // {
+                    //     title: 'First We Meet',
+                    //     date: '2017-09-15',
+                    //     image: 'images/ourStory/couple-1.jpg',
+                    //     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                    // },
                     {
                         title: 'First Date',
                         date: '2017-12-19',
-                        image: 'images/ourStory/couple-2.jpg',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                        image: 'images/ourStory/story-2.jpg',
+                        description: ''
                     },
                     {
                         title: 'In a Relationship',
                         date: '2018-02-13',
-                        image: 'images/ourStory/couple-3.jpg',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                        image: 'images/ourStory/story-3.jpg',
+                        description: ''
                     },
                     {
                         title: 'Marry me',
                         date: '2023-02-06',
-                        image: 'images/ourStory/couple-3.jpg',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                        image: 'images/ourStory/story-4.jpg',
+                        description: ''
                     },
                     {
-                        title: 'Pedidona de mano',
+                        title: 'Pedida de mano',
                         date: '2023-07-10',
-                        image: 'images/ourStory/couple-3.jpg',
-                        description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                        image: 'images/ourStory/story-5.jpg',
+                        description: ''
                     },
                 ]
             },
             gallery: {
-                label: 'Weeding Gallery',
+                label: 'Galeria',
                 description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 photos: [
                     {
                         image: 'images/gallery/gallery-1.jpg',
-                        title: 'Two Glas of Juice'
+                        title: '',
+                        description: '1er Aniversario'
                     },
                     {
                         image: 'images/gallery/gallery-2.jpg',
-                        title: 'Timer starts now!'
+                        title: '',
+                        description: '1er Aniversario'
                     },
                     {
                         image: 'images/gallery/gallery-3.jpg',
-                        title: 'Beautiful sunset'
+                        title: '',
+                        description: ''
                     },
                     {
                         image: 'images/gallery/gallery-4.jpg',
-                        title: 'Company Conference Room'
+                        title: '',
+                        description: 'Titulación \\(•◡•)/'
                     },
                     {
                         image: 'images/gallery/gallery-5.jpg',
-                        title: 'Useful baskets'
+                        title: '',
+                        description: 'Boda (•◡•)'
                     },
                     {
                         image: 'images/gallery/gallery-6.jpg',
-                        title: 'Skater man in the road'
+                        title: '',
+                        description: 'Boda (•◡•)'
                     },
                     {
                         image: 'images/gallery/gallery-7.jpg',
-                        title: 'Two Glas of Juice'
+                        title: '',
+                        description: 'Marry me ♥‿♥'
                     },
                     {
                         image: 'images/gallery/gallery-8.jpg',
-                        title: 'Timer starts now!'
+                        title: '',
+                        description: 'Marry me ♥‿♥'
                     },
                     {
                         image: 'images/gallery/gallery-9.jpg',
-                        title: 'Beautiful sunset'
+                        title: '',
+                        description: ''
                     },
                 ]
+            },
+            attending: {
+                title: 'Contamos con tu asistencia?',
+                description: 'Favor de confirmar asistencia a tráves del siguiente enlace a Whatsapp',
+                btnText: 'Confirmar Asistencia',
+                whatsapp: {
+                    confirmationPhone: '523112045335',
+                    confirmationMessage: 'Soy el Bendito'
+                }
             }
         }
     };

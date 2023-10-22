@@ -12,6 +12,7 @@ function buildPage() {
     setWeedingEvents(_data.sections.weedingEvents);
     setOurStory(_data.sections.ourStory);
     setGallery(_data.sections.gallery);
+    setAttending(_data.sections.attending);
 }
 
 /**
@@ -43,10 +44,12 @@ function setNavbar(navbar) {
  */
 function setBanner(banner) {
     if (banner) {
-        $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.image)}")`);
+        $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.getImage(isMobileDevice()))}")`);
         $('.display-tc h1').html(banner.title);
         $('.display-tc h2').html(banner.subtitle);
-        setCountdown(banner.weedingDate);
+        if (!isMobileDevice()) {
+            setCountdown(banner.weedingDate);
+        }
     }
 }
 
@@ -140,7 +143,10 @@ function setOurStory(ourStory) {
         $('#ourstory-section-title-id').html(ourStory.label);
         $('#ourstory-section-description-id').html(ourStory.description);
         ourStory.events.forEach((_event, i) => {
-            const ourStoryEvent = getOurStoryEventTemplate(_event, i);
+            let ourStoryEvent = getOurStoryEventTemplate(_event, i);
+            if (i != (ourStory.events.length - 1)) {
+                ourStoryEvent += '<br>';
+            }
             $('#timeline-id').append(ourStoryEvent);
         });
     }
@@ -159,7 +165,7 @@ function getOurStoryEventTemplate(_event, position) {
             <div class="timeline-badge" style="background-image:url(${_event.image});"></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <h3 class="timeline-title">${_event.title}</h3>
+                    <h4 class="timeline-title">${_event.title}</h4>
                     <span class="date">${moment(_event.date).format('MMMM DD, YYYY')}</span>
                 </div>
                 <div class="timeline-body">
@@ -191,12 +197,10 @@ function setGallery(gallery) {
 function getPhotoTemplate(photo) {
     return `
     <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(${photo.image}); ">
-        <a href="${photo.image}">
-            <div class="case-studies-summary">
-                <span>14 Photos</span>
-                <h2>${photo.title}</h2>
-            </div>
-        </a>
+    <div class="case-studies-summary">
+        <span>${photo.description}</span>
+        <h2>${photo.title}</h2>
+    </div>
     </li>`;
 }
 
@@ -236,6 +240,38 @@ function buildImagePath(fileName) {
             break;
     }
     return url;
+}
+
+/**
+ * Function to check if device is mobile
+ * @return boolean
+ */
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+/**
+ * Function to set attending section
+ * @param {*} attending 
+ */
+function setAttending(attending) {
+    if (attending) {
+        $('#attending-section-title-id').html(attending.title);
+        $('#attending-section-description-id').html(attending.description);
+        if (attending.whatsapp) {
+            loadWhatsapp(attending, attending.whatsapp);
+        }
+    }
+}
+
+function loadWhatsapp(attending, whtsappCfg) {
+    if (whtsappCfg.confirmationPhone && whtsappCfg.confirmationMessage) {
+        const message = whtsappCfg.confirmationMessage.replace(' ', '%20');
+        const confirmationURL = `https://wa.me/${whtsappCfg.confirmationPhone}?text=${message}`;
+    
+        $('#attending-section-url-id').text(attending.btnText);
+        $('#attending-section-url-id').attr('href', confirmationURL);
+    }
 }
 
 setupPage();
