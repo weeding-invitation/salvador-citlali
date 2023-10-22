@@ -141,6 +141,15 @@ export function getData() {
                         description: ''
                     },
                 ]
+            },
+            attending: {
+                title: 'Contamos con tu asistencia?',
+                description: 'Favor de confirmar asistencia a tráves del siguiente enlace a Whatsapp',
+                btnText: 'Confirmar Asistencia',
+                whatsapp: {
+                    confirmationPhone: '523112045335',
+                    confirmationMessage: 'Soy el Bendito'
+                }
             }
         }
     };
