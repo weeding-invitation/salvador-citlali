@@ -8,7 +8,7 @@ export function getData() {
                 label: 'Weeding'
             },
             banner: {
-                title: 'Salvador & Citlali',
+                title: 'Citlali y Salvador',
                 subtitle: '2024.01.06',
                 weedingDate: weedingDateTime,
                 getImage: function (isMobile) {
@@ -17,7 +17,7 @@ export function getData() {
             },
             hello: {
                 location: 'Tepic, Nayarit',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
+                //description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 weedingDate: weedingDate,
                 coupleWrapper: {
                     groom: {
@@ -57,7 +57,7 @@ export function getData() {
             },
             ourStory: {
                 label: 'Nuestra Historia',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
+                //description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 events: [
                     // {
                     //     title: 'First We Meet',
@@ -65,7 +65,7 @@ export function getData() {
                     //     image: 'images/ourStory/couple-1.jpg',
                     //     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
                     // },
-                    {
+                   /* {
                         title: 'First Date',
                         date: '2017-12-19',
                         image: 'images/ourStory/story-2.jpg',
@@ -75,6 +75,12 @@ export function getData() {
                         title: 'In a Relationship',
                         date: '2018-02-13',
                         image: 'images/ourStory/story-3.jpg',
+                        description: ''
+                    },*/
+                    {
+                        title: 'Primer aniversario',
+                        date: '2019-02-13',
+                        image: 'images/gallery/gallery-2.jpg',
                         description: ''
                     },
                     {
@@ -93,9 +99,9 @@ export function getData() {
             },
             gallery: {
                 label: 'Galeria',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
+                //description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 photos: [
-                    {
+                    /*{
                         image: 'images/gallery/gallery-1.jpg',
                         title: '',
                         description: '1er Aniversario'
@@ -124,7 +130,7 @@ export function getData() {
                         image: 'images/gallery/gallery-6.jpg',
                         title: '',
                         description: 'Boda (•◡•)'
-                    },
+                    },*/
                     {
                         image: 'images/gallery/gallery-7.jpg',
                         title: '',
