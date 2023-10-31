@@ -76,13 +76,13 @@ function setHello(hello) {
         }
 
         if (hello.coupleWrapper && hello.coupleWrapper.textOne) {
-            $('.textOne h2').html(hello.coupleWrapper.textOne.description);
+            $('.textOne h3').html(hello.coupleWrapper.textOne.description);
         }
         if (hello.coupleWrapper && hello.coupleWrapper.textTwo) {
-            $('.textTwo span').html(hello.coupleWrapper.textTwo.description);
+            $('.textTwo p').html(hello.coupleWrapper.textTwo.description);
         }
         if (hello.coupleWrapper && hello.coupleWrapper.textThree) {
-            $('.textThree span').html(hello.coupleWrapper.textThree.description);
+            $('.textThree p').html(hello.coupleWrapper.textThree.description);
         }
     }
 }
