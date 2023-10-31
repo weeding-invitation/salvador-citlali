@@ -74,6 +74,16 @@ function setHello(hello) {
             $('.desc-bride h3').html(hello.coupleWrapper.bride.name);
             $('.desc-bride p').html(hello.coupleWrapper.bride.description);
         }
+
+        if (hello.coupleWrapper && hello.coupleWrapper.textOne) {
+            $('.textOne h2').html(hello.coupleWrapper.textOne.description);
+        }
+        if (hello.coupleWrapper && hello.coupleWrapper.textTwo) {
+            $('.textTwo span').html(hello.coupleWrapper.textTwo.description);
+        }
+        if (hello.coupleWrapper && hello.coupleWrapper.textThree) {
+            $('.textThree span').html(hello.coupleWrapper.textThree.description);
+        }
     }
 }
 

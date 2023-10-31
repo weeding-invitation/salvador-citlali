@@ -12,7 +12,7 @@ export function getData() {
                 subtitle: '2024.01.06',
                 weedingDate: weedingDateTime,
                 getImage: function (isMobile) {
-                    return `images/backgrounds/${isMobile ? 'bg-2.jpg' : 'bg-3.jpg'}`
+                    return `images/backgrounds/${isMobile ? 'bg-6.jpg' : 'bg-6.jpg'}`
                 }
             },
             hello: {
@@ -20,15 +20,24 @@ export function getData() {
                 //description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 weedingDate: weedingDate,
                 coupleWrapper: {
-                    groom: {
+                   /* groom: {
                         name: '',
                         description: '',
                         image: 'images/groom.jpg'
-                    },
+                    },*/
                     bride: {
                         name: '',
                         description: '',
-                        image: 'images/bride.png'
+                        image: 'images/bg-4.jpg'
+                    },
+                    textOne: {
+                        description: `Juntos hemos decidido decir 'Si' a un futuro lleno de amor y aventuras. Unete a nuestra historia.`
+                    },
+                    textTwo: {
+                        description: `Con la bendicion de Dios y nuestros padres.`
+                    },
+                    textThree: {
+                        description: `Tenemos el gusto de invitarlos a nuestra union matrimonial.`
                     }
                 }
             },
@@ -143,6 +152,21 @@ export function getData() {
                     },
                     {
                         image: 'images/gallery/gallery-9.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-10.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-11.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-12.jpg',
                         title: '',
                         description: ''
                     },
