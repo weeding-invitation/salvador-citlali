@@ -9,6 +9,7 @@ function buildPage() {
     setNavbar(_data.sections.navbar);
     setBanner(_data.sections.banner);
     setHello(_data.sections.hello);
+    setDescription(_data.sections.description);
     setWeedingEvents(_data.sections.weedingEvents);
     setOurStory(_data.sections.ourStory);
     setGallery(_data.sections.gallery);
@@ -60,7 +61,7 @@ function setBanner(banner) {
 function setHello(hello) {
     if (hello) {
         const formatedDate = moment(hello.weedingDate).format('MMMM DDDo, YYYY');
-        $('.fh5co-heading h3').html(`${formatedDate} ${hello.location}`);
+        $('.fh5co-heading span').html(`${formatedDate} ${hello.location}`);
         $('#hello-section-description-id').html(hello.description);
 
         if (hello.coupleWrapper && hello.coupleWrapper.groom) {
@@ -74,15 +75,29 @@ function setHello(hello) {
             $('.desc-bride h3').html(hello.coupleWrapper.bride.name);
             $('.desc-bride p').html(hello.coupleWrapper.bride.description);
         }
+    }
+}
 
-        if (hello.coupleWrapper && hello.coupleWrapper.textOne) {
-            $('.textOne h3').html(hello.coupleWrapper.textOne.description);
+function setDescription(description) {
+    if (description) {
+        if (description && description.textOne) {
+            $('.textOne p').html(description.textOne.description);
         }
-        if (hello.coupleWrapper && hello.coupleWrapper.textTwo) {
-            $('.textTwo p').html(hello.coupleWrapper.textTwo.description);
+        if (description && description.textTwo) {
+            $('.textTwo h3').html(description.textTwo.description);
         }
-        if (hello.coupleWrapper && hello.coupleWrapper.textThree) {
-            $('.textThree p').html(hello.coupleWrapper.textThree.description);
+        if (description && description.textThree) {
+            $('.textThree p').html(description.textThree.description);
+        }
+
+        if (description && description.parentsBride) {
+            $('.parentsBrideMother span').html(description.parentsBride.mother);
+            $('.parentsBrideFather span').html(description.parentsBride.father);
+        }
+
+        if (description && description.parentsGroom) {
+            $('.parentsGroomMother span').html(description.parentsGroom.mother);
+            $('.parentsGroomFather span').html(description.parentsGroom.father);
         }
     }
 }

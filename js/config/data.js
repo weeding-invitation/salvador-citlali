@@ -30,15 +30,30 @@ export function getData() {
                         description: '',
                         image: 'images/bg-4.jpg'
                     },
-                    textOne: {
-                        description: `Juntos hemos decidido decir 'Si' a un futuro lleno de amor y aventuras. Unete a nuestra historia.`
-                    },
-                    textTwo: {
-                        description: `Con la bendicion de Dios y nuestros padres.`
-                    },
-                    textThree: {
-                        description: `Tenemos el gusto de invitarlos a nuestra union matrimonial.`
-                    }
+                   
+                }
+            },
+            description: {
+                textOne: {
+                    description: `Juntos hemos decidido decir 'Si' a un futuro lleno de amor y aventuras. Unete a nuestra historia.`
+                },
+                textTwo: {
+                    description: `Con la bendicion de Dios y nuestros padres.`
+                },
+                textThree: {
+                    description: `Tenemos el gusto de invitarlos a nuestra union matrimonial.`
+                },
+                parentsBride: {
+                    mother: "Gloria Ledezma Soria",
+                    father: "Juan Sandoval Hernandez"
+                },
+                parentsBride: {
+                    mother: "Gloria Ledezma Soria",
+                    father: "Juan Sandoval Hernandez"
+                },
+                parentsGroom: {
+                    mother: "Ma. de la luz Llamas Lopez",
+                    father: "Salvador Gonzalez Enriquez"
                 }
             },
             weedingEvents: {
