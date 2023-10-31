@@ -12,6 +12,7 @@ function buildPage() {
     setWeedingEvents(_data.sections.weedingEvents);
     setOurStory(_data.sections.ourStory);
     setGallery(_data.sections.gallery);
+    setAttending(_data.sections.attending);
 }
 
 /**
@@ -247,6 +248,30 @@ function buildImagePath(fileName) {
  */
 function isMobileDevice() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+/**
+ * Function to set attending section
+ * @param {*} attending 
+ */
+function setAttending(attending) {
+    if (attending) {
+        $('#attending-section-title-id').html(attending.title);
+        $('#attending-section-description-id').html(attending.description);
+        if (attending.whatsapp) {
+            loadWhatsapp(attending, attending.whatsapp);
+        }
+    }
+}
+
+function loadWhatsapp(attending, whtsappCfg) {
+    if (whtsappCfg.confirmationPhone && whtsappCfg.confirmationMessage) {
+        const message = whtsappCfg.confirmationMessage.replace(' ', '%20');
+        const confirmationURL = `https://wa.me/${whtsappCfg.confirmationPhone}?text=${message}`;
+    
+        $('#attending-section-url-id').text(attending.btnText);
+        $('#attending-section-url-id').attr('href', confirmationURL);
+    }
 }
 
 setupPage();
