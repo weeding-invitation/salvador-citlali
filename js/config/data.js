@@ -74,18 +74,18 @@ export function getData() {
                     //     image: 'images/ourStory/couple-1.jpg',
                     //     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
                     // },
-                   /* {
+                    /*{
                         title: 'First Date',
                         date: '2017-12-19',
                         image: 'images/ourStory/story-2.jpg',
                         description: ''
-                    },
+                    },*/
                     {
                         title: 'In a Relationship',
                         date: '2018-02-13',
                         image: 'images/ourStory/story-3.jpg',
                         description: ''
-                    },*/
+                    },
                     {
                         title: 'Primer aniversario',
                         date: '2019-02-13',
