@@ -71,7 +71,7 @@ export function getData() {
                     {
                         name: 'Recepción',
                         date: weedingDate,
-                        startAt: '7:00pm',
+                        startAt: '6:30pm',
                         endAt: '12:00pm',
                         locationName: 'Finca Arboledas',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
