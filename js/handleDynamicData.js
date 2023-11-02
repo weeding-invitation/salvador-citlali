@@ -138,7 +138,7 @@ function getWeedingEventTemplate(_event) {
                     <div class="col-sm-12">
                         <span class="align-middle">
                             <i class="icon-clock"></i>&nbsp;
-                            ${_event.startAt} - ${_event.endAt}
+                            ${_event.startAt} ${(_event.endAt ? '-'+_event.endAt : '')}
                         </span>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ function getWeedingEventTemplate(_event) {
                             target="_blank"
                             class="btn btn-primary btn-block"
                             href="${_event.addressHref}"
-                            >Como Llegar</a>
+                            >Ver ubicación</a>
                     </div>
                 </div>
             </div>

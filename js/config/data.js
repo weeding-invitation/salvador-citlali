@@ -58,7 +58,7 @@ export function getData() {
                         name: 'Ceremonia Religiosa',
                         date: weedingDate,
                         startAt: '5:00pm',
-                        endAt: '6:00pm',
+                        endAt: '',
                         locationName: 'Templo Expiatorio del Carmen',
                         address: 'Av. México Nte. 117, Centro, 63000 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Templo+Expiatorio+del+Carmen,+Tepic,+Av.+México+Nte.+117,+Centro,+63000+Tepic,+Nay.,+México/@21.5065047,-104.8959787,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x842736fd96151457:0x344fcb990efcadfe!2m2!1d-104.8935456!2d21.5065556!3e0?entry=ttu'
@@ -67,7 +67,7 @@ export function getData() {
                         name: 'Civil y Recepción',
                         date: weedingDate,
                         startAt: '6:30pm',
-                        endAt: '12:00pm',
+                        endAt: '',
                         locationName: 'Finca Arboledas',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Finca+Arboleda+Central+101+Cuauht%C3%A9moc+63180+Tepic,+Nay.,+M%C3%A9xico/@21.4857117,-104.9046945,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x842736c3470ea7c3:0xd549ac5771ca051e!2m2!1d-104.9047043!2d21.4857347?entry=ttu'
