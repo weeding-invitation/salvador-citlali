@@ -1,6 +1,6 @@
 :root {
-  --primaryColor: #F14E95;
-  --hoverButton: #EFB810;
+  --primaryColor: #556B2F;
+  --hoverButton: #749240;
 }
 
 @font-face {
@@ -1176,7 +1176,7 @@ form label {
 }
 
 .fh5co-heading {
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 .fh5co-heading.fh5co-heading-sm {
   margin-bottom: 2em;
@@ -1377,7 +1377,7 @@ form label {
   background: rgba(255, 255, 255, 0.3);
 }
 #fh5co-started .btn {
-  height: 54px;
+  height: 38px;
   border: none !important;
   background: var(--primaryColor);
   color: #fff;
@@ -1843,6 +1843,10 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+
+.mt-9 {
+  margin-top: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */

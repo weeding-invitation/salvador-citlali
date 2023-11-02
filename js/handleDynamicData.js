@@ -9,6 +9,7 @@ function buildPage() {
     setNavbar(_data.sections.navbar);
     setBanner(_data.sections.banner);
     setHello(_data.sections.hello);
+    setDescription(_data.sections.description);
     setWeedingEvents(_data.sections.weedingEvents);
     setOurStory(_data.sections.ourStory);
     setGallery(_data.sections.gallery);
@@ -47,7 +48,9 @@ function setBanner(banner) {
         $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.getImage(isMobileDevice()))}")`);
         $('.display-tc h1').html(banner.title);
         $('.display-tc h2').html(banner.subtitle);
-        if (!isMobileDevice()) {
+        if (isMobileDevice()) {
+            $('.display-tc h1').attr('style', 'margin-top: 90%');
+        } else {
             setCountdown(banner.weedingDate);
         }
     }
@@ -60,7 +63,7 @@ function setBanner(banner) {
 function setHello(hello) {
     if (hello) {
         const formatedDate = moment(hello.weedingDate).format('MMMM DDDo, YYYY');
-        $('.fh5co-heading h3').html(`${formatedDate} ${hello.location}`);
+        $('#hello-section-title-id').html(`${formatedDate} ${hello.location}`);
         $('#hello-section-description-id').html(hello.description);
 
         if (hello.coupleWrapper && hello.coupleWrapper.groom) {
@@ -73,6 +76,30 @@ function setHello(hello) {
             $('.bride img').css('background-image', `url(${buildImagePath(hello.coupleWrapper.bride.image)})`);
             $('.desc-bride h3').html(hello.coupleWrapper.bride.name);
             $('.desc-bride p').html(hello.coupleWrapper.bride.description);
+        }
+    }
+}
+
+function setDescription(description) {
+    if (description) {
+        if (description && description.textOne) {
+            $('.textOne p').html(description.textOne.description);
+        }
+        if (description && description.textTwo) {
+            $('.textTwo h3').html(description.textTwo.description);
+        }
+        if (description && description.textThree) {
+            $('.textThree p').html(description.textThree.description);
+        }
+
+        if (description && description.parentsBride) {
+            $('.parentsBrideMother span').html(description.parentsBride.mother);
+            $('.parentsBrideFather span').html(description.parentsBride.father);
+        }
+
+        if (description && description.parentsGroom) {
+            $('.parentsGroomMother span').html(description.parentsGroom.mother);
+            $('.parentsGroomFather span').html(description.parentsGroom.father);
         }
     }
 }

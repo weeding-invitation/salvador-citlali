@@ -8,28 +8,47 @@ export function getData() {
                 label: 'Weeding'
             },
             banner: {
-                title: 'Salvador & Citlali',
+                title: 'Citlali y Salvador',
                 subtitle: '2024.01.06',
                 weedingDate: weedingDateTime,
                 getImage: function (isMobile) {
-                    return `images/backgrounds/${isMobile ? 'bg-2.jpg' : 'bg-3.jpg'}`
+                    return `images/backgrounds/${isMobile ? 'bg-6-mobile.png' : 'bg-6.jpg'}`
                 }
             },
             hello: {
                 location: 'Tepic, Nayarit',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 weedingDate: weedingDate,
                 coupleWrapper: {
-                    groom: {
+                   /* groom: {
                         name: '',
                         description: '',
                         image: 'images/groom.jpg'
-                    },
+                    },*/
                     bride: {
                         name: '',
                         description: '',
-                        image: 'images/bride.png'
-                    }
+                        image: 'images/bg-4.jpg'
+                    },
+                   
+                }
+            },
+            description: {
+                textOne: {
+                    description: `Juntos hemos decidido decir 'Si' a un futuro lleno de amor y aventuras. Únete a nuestra historia.`
+                },
+                textTwo: {
+                    description: `Con la bendición de Dios y nuestros padres.`
+                },
+                textThree: {
+                    description: `Tenemos el gusto de invitarlos a nuestra unión matrimonial.`
+                },
+                parentsBride: {
+                    mother: "Gloria Ledezma Soria",
+                    father: "Juan Sandoval Hernandez"
+                },
+                parentsGroom: {
+                    mother: "Ma. de la luz Llamas López",
+                    father: "Salvador González Enríquez"
                 }
             },
             weedingEvents: {
@@ -47,7 +66,7 @@ export function getData() {
                     {
                         name: 'Recepción',
                         date: weedingDate,
-                        startAt: '7:00pm',
+                        startAt: '6:30pm',
                         endAt: '12:00pm',
                         locationName: 'Finca Arboledas',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
@@ -57,28 +76,21 @@ export function getData() {
             },
             ourStory: {
                 label: 'Nuestra Historia',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 events: [
-                    // {
-                    //     title: 'First We Meet',
-                    //     date: '2017-09-15',
-                    //     image: 'images/ourStory/couple-1.jpg',
-                    //     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
-                    // },
                     {
-                        title: 'First Date',
-                        date: '2017-12-19',
-                        image: 'images/ourStory/story-2.jpg',
-                        description: ''
-                    },
-                    {
-                        title: 'In a Relationship',
+                        title: 'Inicio de relación',
                         date: '2018-02-13',
                         image: 'images/ourStory/story-3.jpg',
                         description: ''
                     },
                     {
-                        title: 'Marry me',
+                        title: 'Primer aniversario',
+                        date: '2019-02-13',
+                        image: 'images/gallery/gallery-2.jpg',
+                        description: ''
+                    },
+                    {
+                        title: 'Propuesta de matrimonio',
                         date: '2023-02-06',
                         image: 'images/ourStory/story-4.jpg',
                         description: ''
@@ -93,50 +105,34 @@ export function getData() {
             },
             gallery: {
                 label: 'Galeria',
-                description: 'Te invitamos a celebrar nuestra boda ʕ•ᴥ•ʔ',
                 photos: [
                     {
-                        image: 'images/gallery/gallery-1.jpg',
-                        title: '',
-                        description: '1er Aniversario'
-                    },
-                    {
-                        image: 'images/gallery/gallery-2.jpg',
-                        title: '',
-                        description: '1er Aniversario'
-                    },
-                    {
-                        image: 'images/gallery/gallery-3.jpg',
+                        image: 'images/gallery/gallery-7.jpg',
                         title: '',
                         description: ''
                     },
                     {
-                        image: 'images/gallery/gallery-4.jpg',
-                        title: '',
-                        description: 'Titulación \\(•◡•)/'
-                    },
-                    {
-                        image: 'images/gallery/gallery-5.jpg',
-                        title: '',
-                        description: 'Boda (•◡•)'
-                    },
-                    {
-                        image: 'images/gallery/gallery-6.jpg',
-                        title: '',
-                        description: 'Boda (•◡•)'
-                    },
-                    {
-                        image: 'images/gallery/gallery-7.jpg',
-                        title: '',
-                        description: 'Marry me ♥‿♥'
-                    },
-                    {
                         image: 'images/gallery/gallery-8.jpg',
                         title: '',
-                        description: 'Marry me ♥‿♥'
+                        description: ''
                     },
                     {
                         image: 'images/gallery/gallery-9.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-10.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-11.jpg',
+                        title: '',
+                        description: ''
+                    },
+                    {
+                        image: 'images/gallery/gallery-12.jpg',
                         title: '',
                         description: ''
                     },
@@ -147,8 +143,8 @@ export function getData() {
                 description: 'Favor de confirmar asistencia a tráves del siguiente enlace a Whatsapp',
                 btnText: 'Confirmar Asistencia',
                 whatsapp: {
-                    confirmationPhone: '523112045335',
-                    confirmationMessage: 'Soy el Bendito'
+                    confirmationPhone: '523114291154',
+                    confirmationMessage: 'Hola confirmo asistencia a la boda de Citlali y Salvador'
                 }
             }
         }
