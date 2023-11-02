@@ -48,7 +48,9 @@ function setBanner(banner) {
         $('#fh5co-header').css('background-image', `url("${buildImagePath(banner.getImage(isMobileDevice()))}")`);
         $('.display-tc h1').html(banner.title);
         $('.display-tc h2').html(banner.subtitle);
-        if (!isMobileDevice()) {
+        if (isMobileDevice()) {
+            $('.display-tc h1').attr('style', 'margin-top: 90%');
+        } else {
             setCountdown(banner.weedingDate);
         }
     }
@@ -61,7 +63,7 @@ function setBanner(banner) {
 function setHello(hello) {
     if (hello) {
         const formatedDate = moment(hello.weedingDate).format('MMMM DDDo, YYYY');
-        $('.fh5co-heading span').html(`${formatedDate} ${hello.location}`);
+        $('#hello-section-title-id').html(`${formatedDate} ${hello.location}`);
         $('#hello-section-description-id').html(hello.description);
 
         if (hello.coupleWrapper && hello.coupleWrapper.groom) {
