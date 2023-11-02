@@ -52,6 +52,7 @@ function setBanner(banner) {
             $('.display-tc h1').attr('style', 'margin-top: 90%');
         } else {
             setCountdown(banner.weedingDate);
+            $('.display-tc h1').attr('style', 'margin-top: 70%');
         }
     }
 }

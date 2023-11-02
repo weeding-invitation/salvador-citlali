@@ -9,10 +9,10 @@ export function getData() {
             },
             banner: {
                 title: 'Citlali y Salvador',
-                subtitle: '2024.01.06',
+                subtitle: '2024•01•06',
                 weedingDate: weedingDateTime,
                 getImage: function (isMobile) {
-                    return `images/backgrounds/${isMobile ? 'bg-6-mobile.png' : 'bg-6.jpg'}`
+                    return `images/backgrounds/${isMobile ? 'bg-6-mobile.jpg' : 'bg-6.jpg'}`
                 }
             },
             hello: {
@@ -44,7 +44,7 @@ export function getData() {
                 },
                 parentsBride: {
                     mother: "Gloria Ledezma Soria",
-                    father: "Juan Sandoval Hernandez"
+                    father: "Juan Sandoval Hernández"
                 },
                 parentsGroom: {
                     mother: "Ma. de la luz Llamas López",
@@ -64,7 +64,7 @@ export function getData() {
                         addressHref: 'https://www.google.com/maps/dir//Templo+Expiatorio+del+Carmen,+Tepic,+Av.+México+Nte.+117,+Centro,+63000+Tepic,+Nay.,+México/@21.5065047,-104.8959787,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x842736fd96151457:0x344fcb990efcadfe!2m2!1d-104.8935456!2d21.5065556!3e0?entry=ttu'
                     },
                     {
-                        name: 'Recepción',
+                        name: 'Civil y Recepción',
                         date: weedingDate,
                         startAt: '6:30pm',
                         endAt: '12:00pm',
@@ -140,7 +140,7 @@ export function getData() {
             },
             attending: {
                 title: 'Contamos con tu asistencia?',
-                description: 'Favor de confirmar asistencia a tráves del siguiente enlace a Whatsapp',
+                description: 'Favor de confirmar asistencia a tráves del siguiente enlace a WhatsApp',
                 btnText: 'Confirmar Asistencia',
                 whatsapp: {
                     confirmationPhone: '523114291154',
