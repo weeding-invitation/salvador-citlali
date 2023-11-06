@@ -68,7 +68,7 @@ export function getData() {
                         date: weedingDate,
                         startAt: '6:30pm',
                         endAt: '',
-                        locationName: 'Finca Arboledas',
+                        locationName: 'Finca Arboleda',
                         address: 'Central 101, Cuauhtémoc, 63180 Tepic, Nay., México',
                         addressHref: 'https://www.google.com/maps/dir//Finca+Arboleda+Central+101+Cuauht%C3%A9moc+63180+Tepic,+Nay.,+M%C3%A9xico/@21.4857117,-104.9046945,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x842736c3470ea7c3:0xd549ac5771ca051e!2m2!1d-104.9047043!2d21.4857347?entry=ttu'
                     }
